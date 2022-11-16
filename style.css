@@ -1,0 +1,126 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    background-color: black;
+}
+
+nav{
+    /* background-color: rgba(0, 0, 0, 0.541); */
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    overflow-y: hidden;
+}
+label.logo{
+    color:white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 30px;
+    font-weight: bold;
+
+}
+label.logo a{
+    color: white;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    background: none;
+    font-weight: bolder;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+}
+
+a.active,a:hover{
+    background: linear-gradient(to right,red,rgb(255, 72, 0));
+    /* background: rgba(255, 36, 36, 0.7); */
+    transition: .5s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+.home {
+    padding-top: 100px;
+    display: flex;
+}
+.group-image{
+    flex: 1;
+}
+.group-image img {
+    width: 60vw;
+    height:auto;
+    padding-left: 20px;
+}
+.home-text {
+    width: 37vw;
+    color: white;
+}
+
+.home-text h1 {
+    font-size: 50px;
+}
+@media (max-width:952px) {
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px) {
+    .checkbtn{
+        display: block;
+    }
+     ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #000000;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+     }
+     nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+     }
+     nav ul li a{
+        font-size: 20px;
+     }
+
+     a:hover, a.active{
+        background: none;
+        color: linear-gradient(to right,red,rgb(255, 72, 0))
+     }
+     #check:checked ~ ul {
+        left:0
+     }
+}
