@@ -1,4 +1,4 @@
-*{
+* {
     padding: 0;
     margin: 0;
     text-decoration: none;
@@ -7,50 +7,68 @@
     background-color: black;
 }
 
-nav{
+/* body {
+    display: grid;
+    height: 100vh;
+    margin: 0px;
+    overflow: hidden;
+    place-items: center;
+} */
+
+nav {
     /* background-color: rgba(0, 0, 0, 0.541); */
     height: 80px;
     width: 100%;
     position: fixed;
     overflow-y: hidden;
+    /* background-image: linear-gradient(to bottom, rgba(7, 7, 7, 0.605),rgba(255,255,255)); */
 }
-label.logo{
-    color:white;
+
+label.logo {
+    color: white;
     font-size: 35px;
     line-height: 80px;
     padding: 0 30px;
     font-weight: bold;
+    /* background: #00000000; */
 
 }
-label.logo a{
+
+label.logo a {
     color: white;
+    /* background: #00000000; */
 }
 
 nav ul {
     float: right;
     margin-right: 20px;
+    /* background: #00000000; */
 }
+
 nav ul li {
     display: inline-block;
     line-height: 80px;
     margin: 0 10px;
+    /* background: #00000000; */
 }
 
 nav ul li a {
     color: white;
-    background: none;
+    /* background: #00000000; */
     font-weight: bolder;
     font-size: 17px;
     padding: 7px 13px;
     border-radius: 3px;
 }
 
-a.active,a:hover{
-    background: linear-gradient(to right,red,rgb(255, 72, 0));
+a.active,
+a:hover {
+    background: linear-gradient(to right, red, rgb(255, 72, 0));
     /* background: rgba(255, 36, 36, 0.7); */
     transition: .5s;
 }
-.checkbtn{
+
+.checkbtn {
     font-size: 30px;
     color: white;
     float: right;
@@ -63,41 +81,109 @@ a.active,a:hover{
 #check {
     display: none;
 }
-.home {
-    padding-top: 100px;
-    display: flex;
+
+.first-div{
+    padding-top: 80px;
 }
-.group-image{
-    flex: 1;
-}
-.group-image img {
-    width: 60vw;
-    height:auto;
-    padding-left: 20px;
-}
-.home-text {
-    width: 37vw;
-    color: white;
+.page {
+    min-width: 100vw;
 }
 
-.home-text h1 {
-    font-size: 50px;
+:root {
+    --purple: rgb(123, 31, 162);
+    --violet: rgb(103, 58, 183);
+    --pink: rgb(244, 143, 177);
 }
-@media (max-width:952px) {
-    label.logo{
+
+@keyframes background-pan {
+    from {
+        background-position: 0% center;
+    }
+
+    to {
+        background-position: -200% center;
+    }
+}
+
+.intro-text {
+    padding-top: 80px;
+}
+.intro-text h1 {
+    color: white;
+    font-family: "Rubik", sans-serif;
+    font-size: clamp(2em, 2vw, 4em);
+    font-weight: 400;
+    margin: 0px;
+    padding: 20px;
+    text-align: center;
+}
+
+.intro-text h1>.magic {
+    display: inline-block;
+}
+
+.intro-text h1>.magic>.magic-star {
+    --size: clamp(20px, 1.5vw, 30px);
+
+    animation: scale 700ms ease forwards;
+    display: block;
+    height: var(--size);
+    left: var(--star-left);
+    position: absolute;
+    top: var(--star-top);
+    width: var(--size);
+}
+
+.intro-text h1 > .magic > .magic-star > svg {
+    animation: rotate 1000ms linear infinite;
+    display: block;
+    opacity: 0.7;
+}
+
+.intro-text h1>.magic>.magic-star>svg>path {
+    fill: var(--violet);
+}
+
+.intro-text h1>.magic>.magic-text {
+    animation: background-pan 3s linear infinite;
+    background: linear-gradient(to right,
+            var(--purple),
+            var(--violet),
+            var(--pink),
+            var(--purple));
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+}
+
+@media (max-width:1200px) {
+    label.logo {
         font-size: 30px;
         padding-left: 50px;
     }
-    nav ul li a{
+
+    nav ul li a {
         font-size: 16px;
+    }
+    .intro-text{
+        width: 800px;
+        text-align: center;
+        margin: auto;
+    }
+    .intro-text h1{
+        margin: auto;
+        text-align: center;
+
     }
 }
 
-@media (max-width: 858px) {
-    .checkbtn{
+@media (max-width: 1150px) {
+    .checkbtn {
         display: block;
     }
-     ul {
+
+    ul {
         position: fixed;
         width: 100%;
         height: 100vh;
@@ -106,21 +192,39 @@ a.active,a:hover{
         left: -100%;
         text-align: center;
         transition: all .5s;
-     }
-     nav ul li{
+    }
+
+    nav ul li {
         display: block;
         margin: 50px 0;
         line-height: 30px;
-     }
-     nav ul li a{
-        font-size: 20px;
-     }
+    }
 
-     a:hover, a.active{
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    a:hover,
+    a.active {
         background: none;
-        color: linear-gradient(to right,red,rgb(255, 72, 0))
-     }
-     #check:checked ~ ul {
-        left:0
-     }
+        color: linear-gradient(to right, red, rgb(255, 72, 0))
+    }
+
+    #check:checked~ul {
+        left: 0
+    }
+    
+}
+
+@media (max-width: 800px){
+    .intro-text{
+        width: 100vw;
+        text-align: center;
+        margin: auto;
+    }
+    .intro-text h1{
+        margin: auto;
+        text-align: center;
+
+    }
 }
