@@ -99,7 +99,9 @@ a:hover {
         background-position: -200% center;
     }
 }
-
+.first-div {
+    background-color: #000000;
+}
 .intro-text {
     padding-top: 20vh;
     padding-bottom: 20vh;
