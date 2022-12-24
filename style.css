@@ -7,13 +7,26 @@
     /* background:black; */
 }
 
-/* body {
-    display: grid;
-    height: 100vh;
-    margin: 0px;
-    overflow: hidden;
-    place-items: center;
-} */
+:root {
+    --apple-dark: rgb(30, 30, 30);
+    --apple-dark-container: rgb(24,24,24);
+    --apple-button: #006EDB;
+    --dark: rgb(20, 20, 20);
+    --yellow: rgb(253, 216, 53);
+    --blue: rgb(98, 0, 234);
+
+    --c1: rgb(38, 70, 83);
+    /* --c1:rgb(1,1,50); */
+    /* --c1: linear-gradient(-40deg,rgb(1,1,50),rgb(25,25,100)); */
+    --c2: rgb(42, 157, 143);
+
+    --left-color: var(--c1);
+    --right-color: var(--c2);
+    --purple: rgb(123, 31, 162);
+    --violet: rgb(103, 58, 183);
+    --pink: rgb(244, 143, 177);
+}
+
 nav {
     /* background-color: rgba(0, 0, 0, 0.541); */
     height: 80px;
@@ -21,9 +34,9 @@ nav {
     position: fixed;
     overflow-y: hidden;
     /* background-color: #000000; */
-    background-image: linear-gradient(to bottom,rgba(7, 7, 7, 0.637),rgba(0, 0, 0, 0.093));
-    /* backdrop-filter: blur(5px); */
-    -webkit-backdrop-filter: blur(5px);
+    background-image: linear-gradient(to bottom, rgba(7, 7, 7, 0.637), rgba(0, 0, 0, 0.093));
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
     z-index: 3;
 }
 
@@ -58,16 +71,18 @@ nav ul li {
 nav ul li a {
     color: white;
     /* background: #00000000; */
-    font-weight: bolder;
+    /* font-weight: bolder; */
+    font-family: sans-serif;
     font-size: 17px;
     padding: 7px 13px;
-    border-radius: 3px;
+    border-radius: 100px;
 }
 
 a.active,
 a:hover {
     /* background: linear-gradient(to right, red, rgb(255, 72, 0)); */
-    background: rgb(42, 157, 143);
+    /* background: rgb(42, 157, 143); */
+    background: var(--apple-button);
     transition: .5s;
 }
 
@@ -85,9 +100,11 @@ a:hover {
     display: none;
 }
 
-.first-div{
+.first-div {
     padding-top: 80px;
+    height: 100vh;
 }
+
 .page {
     min-width: 100vw;
 }
@@ -102,14 +119,17 @@ a:hover {
         background-position: -200% center;
     }
 }
+
 .first-div {
     background-color: #000000;
 }
+
 .intro-text {
-    padding-top: 20vh;
+    padding-top: 35vh;
     padding-bottom: 20vh;
     background-color: #000000;
 }
+
 .intro-text h1 {
     color: white;
     font-family: "Rubik", sans-serif;
@@ -136,7 +156,7 @@ a:hover {
     width: var(--size);
 }
 
-.intro-text h1 > .magic > .magic-star > svg {
+.intro-text h1>.magic>.magic-star>svg {
     animation: rotate 1000ms linear infinite;
     display: block;
     opacity: 0.7;
@@ -159,72 +179,223 @@ a:hover {
     white-space: nowrap;
 }
 
-body{
+body {
     background-color: transparent;
 
 }
-:root {
-    --dark: rgb(20, 20, 20);
-    --yellow: rgb(253, 216, 53);
-    --blue: rgb(98, 0, 234);
-    
-    --c1: rgb(38, 70, 83);
-    --c2: rgb(42, 157, 143);
-    
-    --left-color: var(--c1);
-    --right-color: var(--c2);
-    --purple: rgb(123, 31, 162);
-    --violet: rgb(103, 58, 183);
-    --pink: rgb(244, 143, 177);
-  }
-  
-  .side {
+
+.projects {
+    background-color: var(--apple-dark);
+    color: aliceblue;
+    font-family: "Rubik", sans-serif;
+    padding: 25px;
+}
+
+.card {
+    color: whitesmoke;
+    background-color: var(--apple-dark-container);
+    background-size: cover;
+    padding: 10rem 0 0;
+    max-width: 30ch;
+    min-width: 500px;
+    display: inline-block;
+    border-radius: 0.6rem;
+    overflow: hidden;
+    transition: transform 500ms ease;
+}
+
+.card-big {
+    color: whitesmoke;
+    background-color: var(--apple-dark-container);
+    background-size: cover;
+    padding: 10rem 0 0;
+    max-width: 30ch;
+    min-width: 1030px;
+    display: inline-block;
+    border-radius: 0.6rem;
+    overflow: hidden;
+    transition: transform 500ms ease;
+}
+
+
+.card-body{
+    padding-left: 100px;
+}
+.card-content {
+    --padding: 1.5rem;
+    padding: var(--padding);
+    text-align: right;
+    /* background: linear-gradient(hsl(0 0% 0% / 0),
+            hsl(20 0% 0% / 0.3) 20%,
+            hsl(0 0% 0% / 1)); */
+}
+
+.card-body{
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+@media (hover) {
+    .card-content {
+        transform: translateY(65%);
+        transition: transform 500ms ease;
+    }
+
+    .card:hover,
+    .card:focus-within {
+        transform: scale(1.03);
+    }
+
+    .card:hover .card-content,
+    .card:focus-within .card-content {
+        transform: translateY(0%);
+    }
+
+    .card:hover .card-content>*:not(.card-title),
+    .card:focus-within .card-content>*:not(.card-title) {
+        opacity: 1;
+        transition: opacity 500ms linear;
+    }
+
+    .card-title::after {
+        transform: scaleX(0);
+    }
+
+    .card-content>*:not(.card-title) {
+        opacity: 0;
+    }
+
+
+
+
+    .card-big:hover,
+    .card-big:focus-within {
+        transform: scale(1.03);
+    }
+
+    .card-big:hover .card-content,
+    .card-big:focus-within .card-content {
+        transform: translateY(0%);
+    }
+
+    .card-big:hover .card-content>*:not(.card-title),
+    .card-big:focus-within .card-content>*:not(.card-title) {
+        opacity: 1;
+        transition: opacity 500ms linear;
+    }
+}
+
+.card-title {
+
+    position: relative;
+    width: max-content;
+    font-size: 20px;
+}
+
+.card-main {
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    display: flex;
+    text-align: center;
+    display: block;
+}
+
+.card-main div {
+    margin: 0.7em;
+}
+
+.card-title::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    left: calc(var(--padding)* -1);
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    background-color: var(--apple-button);
+    transition: transform 500ms ease;
+    transition-delay: 500ms;
+
+}
+
+.card:hover .card-title::after,
+.card:focus-within .card-title::after {
+    transform: scaleX(1)
+}
+
+.card:focus-within .card-content {
+    transition-duration: 0ms;
+}
+
+.card-big:hover .card-title::after,
+.card-big:focus-within .card-title::after {
+    transform: scaleX(1)
+}
+
+.card-big:focus-within .card-content {
+    transition-duration: 0ms;
+}
+.button {
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    background-color: var(--apple-button);
+    padding: 0.5em 1.25em;
+    border-radius: 0.4em;
+}
+
+.button:hover,
+.button:focus {
+    background-color: var(--apple-button);
+}
+
+.side {
     display: grid;
     height: 100vh;
     overflow: hidden;
     place-items: center;
     position: absolute;
     width: 100%;
-  }
-  
-  .side .title {
+}
+
+.side .title {
     font-family: "Rubik", sans-serif;
     font-size: 8vw;
     margin: 0px 10vw;
     width: 80vw;
-  }
-  
-  .side .fancy {
+}
+
+.side .fancy {
     font-family: "Lobster", cursive;
     font-size: 1.3em;
     line-height: 0.8em;
-  }
-  
-  #left-side {
+}
+
+#left-side {
     background-color: var(--left-color);
     width: 60%;
     z-index: 2;
-  }
-  
-  #left-side .title {  
-    color: white;  
-  }
-  
-  #left-side .fancy {
-    color: var(--right-color);
-  }
-  
-  #right-side {
-    background-color: var(--right-color);
-  }
-  
-  #right-side .title {
-    color: var(--dark);
-  }
-  
-  #right-side .fancy {
+}
+
+#left-side .title {
     color: white;
-  }
+}
+
+#left-side .fancy {
+    color: var(--right-color);
+}
+
+#right-side {
+    background-color: var(--right-color);
+}
+
+#right-side .title {
+    color: var(--dark);
+}
+
+#right-side .fancy {
+    color: white;
+}
 
 @media (max-width:1200px) {
     label.logo {
@@ -235,12 +406,14 @@ body{
     nav ul li a {
         font-size: 16px;
     }
-    .intro-text{
+
+    .intro-text {
         width: 800px;
         text-align: center;
         margin: auto;
     }
-    .intro-text h1{
+
+    .intro-text h1 {
         margin: auto;
         text-align: center;
 
@@ -284,16 +457,17 @@ body{
     #check:checked~ul {
         left: 0
     }
-    
+
 }
 
-@media (max-width: 800px){
-    .intro-text{
+@media (max-width: 800px) {
+    .intro-text {
         width: 100vw;
         text-align: center;
         margin: auto;
     }
-    .intro-text h1{
+
+    .intro-text h1 {
         margin: auto;
         text-align: center;
 
