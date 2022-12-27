@@ -1,0 +1,1 @@
+fix blur effect in chrome
