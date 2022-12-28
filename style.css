@@ -36,14 +36,27 @@ nav {
     width: 100%;
     position: fixed;
     overflow-y: hidden;
-    background-color: #00000000;
-    background-image: linear-gradient(to bottom, rgba(7, 7, 7, 0.637), rgba(0, 0, 0, 0.093));
-    /* backdrop-filter: xblur(50px); */
+    /* background-color: #00000000; */
+    /* background-color: red; */
+    /* background-image: linear-gradient(to bottom, rgba(203, 23, 23, 0.76) 40px, rgb(20, 143, 104) 20px,rgb(24, 34, 177) 20px); */
+
+    background-image: linear-gradient(to bottom, rgb(7, 7, 7), rgb(0, 0, 0),rgba(7, 7, 7, 0));
     /* filter: blur(8px); */
     /* pointer-events: none; */
     /* backdrop-filter: blur(50px); */
-    -webkit-backdrop-filter: blur(50px);
+    
     z-index: 3;
+}
+@media all and (min-resolution:.001dpcm)
+{ 
+    @supports (-webkit-hyphens:none) and (stroke-color:transparent)
+    {
+        nav
+        {
+            background-image: none;
+            -webkit-backdrop-filter: blur(50px);
+        }
+    }
 }
 
 label.logo {
@@ -174,6 +187,51 @@ a:hover {
     to {
         background-position: -200% center;
     }
+}
+
+.socials-hover{
+    position: fixed;
+    writing-mode: vertical-rl;
+    /* top:40vh;
+    right: 0vw; */
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 40px;
+    z-index: 9;
+    /* height: 100vh; */
+    /* align-items: center; */
+    /* padding-top: 80px; */
+    /* background-color: var(--apple-dark); */
+    /* background-color: var(--apple-dark); */
+}
+
+.socials-right {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin: 1rem 0 2rem 0; */
+}
+
+.socials-right li {
+    margin: 10px 10px;
+}
+
+.socials-right a {
+    text-decoration: none;
+    color: var(--apple-gray);
+}
+
+.socials-right a i {
+    font-size: 1.1rem;
+    transition: color .4s ease;
+
+}
+
+.socials-right a:hover i {
+    color: white;
+    /* font-size: 1.3rem; */
 }
 
 .first-div {
@@ -415,7 +473,7 @@ body {
 }
 
 .card-main div {
-    margin: 0.25vw;
+    margin: 0.5vw;
     /* padding-top: 0.7em; */
     padding-bottom: 0.7em;
 }
@@ -555,7 +613,7 @@ body {
         display: block;
     }
 
-    ul {
+    nav ul {
         position: fixed;
         width: 100%;
         height: 100vh;
