@@ -38,7 +38,7 @@ nav {
     overflow-y: hidden;
     background-color: #00000000;
     background-image: linear-gradient(to bottom, rgba(7, 7, 7, 0.637), rgba(0, 0, 0, 0.093));
-    /* backdrop-filter: blur(50px); */
+    /* backdrop-filter: xblur(50px); */
     /* filter: blur(8px); */
     /* pointer-events: none; */
     /* backdrop-filter: blur(50px); */
@@ -83,6 +83,10 @@ nav ul li a {
     font-size: 14px;
     padding: 7px 7px;
     border-radius: 100px;
+}
+
+nav ul p{
+    color: white;
 }
 
 a.active,
@@ -266,7 +270,7 @@ body {
     background-color: var(--apple-dark-container);
     background-size: cover;
     padding: 10rem 0 0;
-    width: 85vw;
+    width: 86vw;
     min-width: 300px;
     height: 400px;
     /* min-width: 1030px; */
@@ -296,9 +300,11 @@ body {
     padding-left: 100px;
 }
 
+
 .card-content {
     --padding: 1.5rem;
     padding: var(--padding);
+    padding-top: 50px;
     text-align: right;
     /* background: linear-gradient(hsl(0 0% 0% / 0),
             hsl(20 0% 0% / 0.3) 20%,
@@ -310,6 +316,21 @@ body {
     padding-top: 10px;
 }
 
+/* .card-content{
+    border-style: solid;
+    border-width: 1px;
+    border-color: red;
+}
+.card-title{
+    border-style: solid;
+    border-width: 1px;
+    border-color: red;
+}
+.card-body{
+    border-style: solid;
+    border-width: 1px;
+    border-color: red;
+} */
 @media (hover) {
     .card-content {
         transform: translateY(65%);
@@ -527,6 +548,9 @@ body {
 }
 
 @media (max-width: 1150px) {
+    .nav{
+        backdrop-filter: none;
+    }
     .checkbtn {
         display: block;
     }
@@ -637,6 +661,7 @@ body {
 }
 
 .footer-content h3 {
+    color: white;
     font-size: 1.8rem;
     font-weight: 400;
     text-transform: capitalize;
@@ -644,6 +669,7 @@ body {
 }
 
 .footer-content p {
+    color: white;
     max-width: 500px;
     margin: 10px auto;
     line-height: 28px;
@@ -683,6 +709,7 @@ body {
 }
 
 .footer-bottom {
+    color: white;
     background: #000;
     width: 100%;
     /* padding: 2px 0; */
@@ -699,4 +726,35 @@ body {
     text-transform: uppercase;
     opacity: 2;
     font-weight: 200;
+}
+
+.recon{
+    background: linear-gradient(hsl(0 0% 0% / 0),
+            hsl(20 0% 0% / 0.3) 20%,
+            hsl(0 0% 0% / 1)),url("images/recon.jpeg");
+}
+
+.stylegan3{
+    background: linear-gradient(hsl(0 0% 0% / 0),
+            hsl(20 0% 0% / 0.3) 20%,
+            hsl(0 0% 0% / 1)),url("images/stylegan3\ image2.png");
+}
+
+.eric {
+    background: linear-gradient(hsl(0 0% 0% / 0),
+            hsl(20 0% 0% / 0.3) 20%,
+            hsl(0 0% 0% / 1)),url("images/eric.gif") no-repeat;
+}
+
+.ctsh {
+    background: linear-gradient(hsl(0 0% 0% / 0),
+            hsl(20 0% 0% / 0.3) 20%,
+            hsl(0 0% 0% / 1)),url("images/ctsh.png") no-repeat;
+}
+
+.sshmon{
+    background: linear-gradient(hsl(0 0% 0% / 0),
+            hsl(20 0% 0% / 0.3) 20%,
+            hsl(0 0% 0% / 1)),url("images/sshmon.png");
+    background-size: 800px 400px;
 }

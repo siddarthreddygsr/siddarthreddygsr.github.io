@@ -1,1 +1,2 @@
-fix blur effect in chrome
+- [ ] fix blur effect in chrome
+- [ ] fix footer
