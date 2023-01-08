@@ -64,7 +64,7 @@ label.logo {
     color: white;
     font-size: 25px;
     line-height: 80px;
-    padding: 0 30px;
+    padding: 0 0px;
     font-weight: bold;
     /* background: #00000000; */
 
@@ -73,8 +73,14 @@ label.logo {
 label.logo a {
     color: white;
     font-family: "Rubik", sans-serif;
+    font-size: 0;
     /* background: #00000000; */
 }
+
+label.logo svg {
+    height: 80px;
+}
+
 
 nav ul {
     float: right;
@@ -162,6 +168,18 @@ a:hover {
     position: absolute;
     transform: rotate(0deg);
     transition: .4s ease-in-out;
+}
+#signature{
+    stroke-dasharray: 3956;
+    stroke-dashoffset: 3956;
+    animation: sign 20s ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes sign {
+    to {
+        stroke-dashoffset: 0;
+    }
 }
 
 #menu-wrapper #hamburger-menu span:nth-child(1) {
@@ -632,7 +650,9 @@ body {
     .checkbtn {
         display: block;
     }
-
+    label.logo svg{
+        height: 60px;
+    }
     nav ul {
         position: fixed;
         width: 100%;
@@ -736,6 +756,14 @@ body {
     .card-3x {
         width: 335px;
         font-size: medium;
+    }
+}
+@media (max-width:585px){
+    label.logo svg{
+        height: 0px;
+    }
+    label.logo a {
+        font-size: 25px;
     }
 }
 @media (max-width:400px) {
