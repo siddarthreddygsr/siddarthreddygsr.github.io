@@ -341,7 +341,7 @@ a:hover {
 
 body {
     background-color: transparent;
-
+    background: var(--apple-dark);
 }
 
 .projects {
@@ -509,7 +509,7 @@ body {
 }
 
 .card-main div {
-    margin: 0.5vw;
+    margin: 0.8vw;
     /* padding-top: 0.7em; */
     padding-bottom: 0.7em;
 }
@@ -888,4 +888,9 @@ body {
             hsl(20 0% 0% / 0.3) 20%,
             hsl(0 0% 0% / 1)),url("images/sshmon.png");
     background-size: 800px 400px;
+}
+
+html{
+    width:100vw;
+    align-items: center;
 }
