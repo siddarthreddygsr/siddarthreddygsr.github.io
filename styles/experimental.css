@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+:root{
+  --crimson-red: #e34d67;
+}
+
 .experiment {
   padding-bottom: 180px;
   min-width: 100vw;
@@ -143,7 +147,7 @@
 
 .slider-wrapper .slide-navigation__txt li span.active {
   transform: scale(1.1, 1.1);
-  color: #E34D67;
+  color: var(--crimson-red);
 }
 
 .slider-wrapper .slide-navigation__squares {
@@ -175,7 +179,7 @@
 }
 
 .slider-wrapper .slide-navigation__squares .square.red {
-  background: #E34D67;
+  background: var(--crimson-red);
 }
 
 .slider-wrapper .slides-container {
@@ -226,7 +230,7 @@
 }
 
 .slider-wrapper .slide .slide-content h2 {
-  color: #E34D67;
+  color: var(--crimson-red);
   font-size: 4.8rem;
   max-width: 80%;
   margin: 0;
@@ -275,18 +279,18 @@
   text-align: center;
   background: transparent;
   background-color: transparent;
-  border: 0.28rem solid #E34D67;
+  border: 0.28rem solid var(--crimson-red);
   text-transform: uppercase;
   padding: 0.8rem 0.5rem;
   font-size: 1.5rem;
-  color: #E34D67;
+  color: var(--crimson-red);
   font-weight: 600;
   letter-spacing: 0.2rem;
   outline: none;
   overflow: hidden;
 }
 .slider-wrapper .slide .slide-txt button a{
-  color: #E34D67;
+  color: var(--crimson-red);
 }
 .white{
   background-image: none;
