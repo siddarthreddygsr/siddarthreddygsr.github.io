@@ -862,31 +862,31 @@ body {
 .recon{
     background: linear-gradient(hsl(0 0% 0% / 0),
             hsl(20 0% 0% / 0.3) 20%,
-            hsl(0 0% 0% / 1)),url("images/recon.jpeg");
+            hsl(0 0% 0% / 1)),url("/images/recon.jpeg");
 }
 
 .stylegan3{
     background: linear-gradient(hsl(0 0% 0% / 0),
             hsl(20 0% 0% / 0.3) 20%,
-            hsl(0 0% 0% / 1)),url("images/stylegan3\ image2.png");
+            hsl(0 0% 0% / 1)),url("/images/stylegan3\ image2.png");
 }
 
 .eric {
     background: linear-gradient(hsl(0 0% 0% / 0),
             hsl(20 0% 0% / 0.3) 20%,
-            hsl(0 0% 0% / 1)),url("images/eric.gif") no-repeat;
+            hsl(0 0% 0% / 1)),url("/images/eric.gif") no-repeat;
 }
 
 .ctsh {
     background: linear-gradient(hsl(0 0% 0% / 0),
             hsl(20 0% 0% / 0.3) 20%,
-            hsl(0 0% 0% / 1)),url("images/ctsh.png") no-repeat;
+            hsl(0 0% 0% / 1)),url("/images/ctsh.png") no-repeat;
 }
 
 .sshmon{
     background: linear-gradient(hsl(0 0% 0% / 0),
             hsl(20 0% 0% / 0.3) 20%,
-            hsl(0 0% 0% / 1)),url("images/sshmon.png");
+            hsl(0 0% 0% / 1)),url("/images/sshmon.png");
     background-size: 800px 400px;
 }
 
