@@ -1,3 +1,26 @@
+.mediaplayer{
+    display: flex;
+    max-width: 100vw;
+}
+
+.media{
+    flex: 1;
+}
+
+.mediaplayer div{
+    /* border: 1px red solid; */
+}
+.media video {
+    position: relative;
+    /* padding-left: 20%;
+    padding-top: 10%; */
+    top: 40%;
+    left: 20%;
+    -ms-transform: translateY(-40%);
+    transform: translateY(-40%);
+}
+
+
 .container {
     display: block;
     width: 100%;

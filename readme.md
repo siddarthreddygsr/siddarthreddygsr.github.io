@@ -1,5 +1,5 @@
 - [x] fix blur effect in chrome
 - [x] fix footer
 - [ ] uncheck nav checkbox when clicked on an anchor tag
-- [ ] media player in website to play eric audio
+- [x] media player in website to play eric audio
 - [ ] video player to play audio reactive?
