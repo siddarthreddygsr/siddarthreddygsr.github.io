@@ -232,10 +232,10 @@ a:hover {
     justify-content: center;
     z-index: 9;
 }
-.socials-right h1{
-    /* padding-top: 10px;
-    padding-bottom: 10px; */
-}
+/* .socials-right h1{
+    padding-top: 10px;
+    padding-bottom: 10px;
+} */
 .socials-right h1:hover{
     color:white;
 }
@@ -336,6 +336,7 @@ a:hover {
             var(--pink),
             var(--purple));
     background-size: 200%;
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     white-space: nowrap;

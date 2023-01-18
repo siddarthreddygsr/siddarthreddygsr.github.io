@@ -3,4 +3,5 @@
 - [ ] uncheck nav checkbox when clicked on an anchor tag
 - [x] media player in website to play eric audio
 - [ ] video player to play audio reactive?
-- [x] aaqo.github.io
+- [x] https://aaqo.github.io sid49__@gmail.com
+- [x] https://bbxb.github.io edu.sid@gmail.com
