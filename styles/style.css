@@ -45,7 +45,7 @@ nav {
     /* pointer-events: none; */
     /* backdrop-filter: blur(50px); */
     
-    z-index: 3;
+    z-index: 9;
 }
 @media all and (min-resolution:.001dpcm)
 { 
@@ -55,6 +55,7 @@ nav {
         {
             /* background-image: none; */
             background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.462), rgba(0, 0, 0, 0.585));
+            backdrop-filter: blur(50px);
             -webkit-backdrop-filter: blur(50px);
         }
     }
