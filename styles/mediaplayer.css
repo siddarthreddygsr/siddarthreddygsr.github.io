@@ -18,6 +18,14 @@
     transform: scaleX(-1);
     /* background-size: 100% 100%; */
 }
+
+@media (max-width:1150px)
+{
+    .first-div{
+        background-image: none;
+        /* background-color: #8D6CBA; */
+    }
+}
 .first-div .intro-text{
     transform: scaleX(-1);
     /* background-size: 100% 100%; */

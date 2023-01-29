@@ -627,17 +627,7 @@ body {
 #right-side .fancy {
     color: white;
 }
-
-@media (max-width:1200px) {
-    label.logo {
-        font-size: 30px;
-        padding-left: 50px;
-    }
-
-    nav ul li a {
-        font-size: 16px;
-    }
-
+@media (max-width:1900px) {
     .intro-text {
         width: 800px;
         text-align: center;
@@ -648,6 +638,16 @@ body {
         margin: auto;
         text-align: center;
 
+    }
+}
+@media (max-width:1200px) {
+    label.logo {
+        font-size: 30px;
+        padding-left: 50px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
     }
 }
 
